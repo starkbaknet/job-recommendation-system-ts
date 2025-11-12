@@ -1,10 +1,10 @@
 # Job Recommendation System (TypeScript)
 
-> **Note**: This is a production-ready TypeScript job recommendation system using **vector-based cosine similarity**. It provides intelligent job matching based on semantic similarity, applicant experience, applied jobs, and user interactions.
-
 > **Production Use**: This project powers the job recommendation system for **[jobs.af](https://jobs.af)**, providing intelligent job matching for thousands of job seekers.
 
 A high-performance job recommendation system built with TypeScript, Express, TypeORM, and PostgreSQL. The system uses vector embeddings and cosine similarity to provide accurate, personalized job recommendations at scale.
+
+This is a production-ready TypeScript job recommendation system using **vector-based cosine similarity**. It provides intelligent job matching based on semantic similarity, applicant experience, applied jobs, and user interactions.
 
 ## 🚀 Features
 
