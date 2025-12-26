@@ -196,7 +196,7 @@ npm run dev
 
 The API will be available at `http://localhost:8000`
 
-## 📡 API Documentation
+## API Documentation
 
 ### Core Endpoints
 
@@ -302,7 +302,7 @@ curl "http://localhost:8000/recommendations/2085d6cd-b96a-4872-b61c-513feb652155
 ./test_performance.sh
 ```
 
-## 🗄️ Database Schema
+## Database Schema
 
 ### Key Tables
 
