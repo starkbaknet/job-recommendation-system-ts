@@ -6,7 +6,7 @@ A high-performance job recommendation system built with TypeScript, Express, Typ
 
 This is a production-ready TypeScript job recommendation system using **vector-based cosine similarity**. It provides intelligent job matching based on semantic similarity, applicant experience, applied jobs, and user interactions.
 
-## 🚀 Features
+## Features
 
 - **Vector-Based Recommendations**: Uses cosine similarity between job and applicant embeddings for semantic matching
 - **Dynamic Domain Detection**: Fully dynamic system with no hard-coded keywords or job types
@@ -19,7 +19,7 @@ This is a production-ready TypeScript job recommendation system using **vector-b
 - **RESTful API**: Express.js with TypeScript
 - **Type Safety**: Full TypeScript support with type-safe database models
 
-## 📊 Performance
+## Performance
 
 - **Response Time**: ~500-700ms for typical requests (optimized from ~878ms)
 - **Memory Efficient**: Only loads embeddings initially (~500MB-1GB for 1M jobs), full job data only for top candidates (~1-5MB)
@@ -27,7 +27,7 @@ This is a production-ready TypeScript job recommendation system using **vector-b
 - **Database-Level Queries**: All vector lookups performed at database level
 - **Parallel Processing**: Independent queries run in parallel for better performance
 
-## 🏗️ Architecture
+## Architecture
 
 ```
 ┌───────────────────────────────────────────────────────────────┐
@@ -76,7 +76,7 @@ job_recommender_ts/
 └── README.md                # This file
 ```
 
-## 🧠 Recommendation Algorithm
+## Recommendation Algorithm
 
 The system uses **pure vector cosine similarity** with intelligent boosting and downranking:
 
@@ -129,7 +129,7 @@ The system uses **pure vector cosine similarity** with intelligent boosting and 
 - **Applied/Interaction Similarity**: Only loads embeddings, fetches full data for top 10 similar jobs per source
 - **Scales to Millions**: Works efficiently with millions of jobs
 
-## 🛠️ Technology Stack
+## Technology Stack
 
 - **Backend Framework**: Express.js (TypeScript)
 - **Database**: PostgreSQL
@@ -137,14 +137,14 @@ The system uses **pure vector cosine similarity** with intelligent boosting and 
 - **Language**: TypeScript
 - **Vector Storage**: JSON arrays in TEXT columns (can be upgraded to pgvector)
 
-## 📦 Prerequisites
+## Prerequisites
 
 - Node.js 18+ and npm
 - PostgreSQL 15+ (or Docker)
 - TypeScript 5+
 - Vector embeddings service (external service that generates embeddings for jobs and applicants)
 
-## 🚀 Quick Start
+## Quick Start
 
 ### 1. Install Dependencies
 
@@ -318,7 +318,7 @@ curl "http://localhost:8000/recommendations/2085d6cd-b96a-4872-b61c-513feb652155
 - **`applicant_job_interactions`**: Tracks user interactions (views, clicks, saves, etc.)
 - **`job_recommendations_cache`**: (Optional) Cache for pre-computed recommendations
 
-## ⚡ Performance Testing
+## Performance Testing
 
 See [README_PERFORMANCE.md](./README_PERFORMANCE.md) for detailed performance testing guide.
 
@@ -339,7 +339,7 @@ time curl --location 'http://localhost:8000/recommendations/2085d6cd-b96a-4872-b
 node test_with_node_profiler.js 10
 ```
 
-## 🔧 How It Works
+## How It Works
 
 ### Recommendation Flow
 
@@ -363,7 +363,7 @@ node test_with_node_profiler.js 10
 - **Applied/Interaction**: Only loads embeddings, fetches full data for top 10 per source
 - **Total Memory**: ~500MB-1GB for 1M jobs (embeddings only) + ~1-5MB (full job data)
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
 ### Issue: Database connection failed
 
@@ -396,7 +396,7 @@ node test_with_node_profiler.js 10
 3. Consider using `pgvector` extension for native vector operations
 4. Monitor with `./test_performance.sh`
 
-## 🔮 Future Improvements
+## Future Improvements
 
 - [ ] Upgrade to `pgvector` extension for native vector operations
 - [ ] Add caching layer (Redis) for frequently accessed recommendations
@@ -407,7 +407,7 @@ node test_with_node_profiler.js 10
 - [ ] A/B testing framework for recommendation algorithms
 - [ ] GraphQL API option
 
-## 📝 License
+## License
 
 This project is open-source and available under the MIT license.
 
